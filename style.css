@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif,
+                 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.description {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description h1 {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+}
+
+.description h1 span {
+    color: hsl(277, 64%, 61%);
+}
+ .description .benefits {
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: .8rem;
+    line-height: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    color:hsl(0, 0%, 100%);
+    padding-top: 4rem;
+}
+.stats p {
+    
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.stats span {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: .4em;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.image {
+    position: relative;
+}
+.image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:  hsla(277, 64%, 61%, .6);
+}
+
+@media only screen and (max-width: 450px){
+    body {
+        text-align: center;
+    }
+    .wrap{
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        order: -1;
+    }
+    .stats {
+        flex-direction: column;
+    }
+    .stats p {
+        margin-top: 1rem ;
+    }
+    .description h1 {
+        font-size: 1.4rem;
+    }
+}
+
